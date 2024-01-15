@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>"Vibrating heart</title>
+</head>
+
+<body>
+	<div class="heart">
+	</div>
+
+<style>
+  body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #212121;
+}
+.heart {
+	height: 70px;
+	width: 70px;
+	background: #b71c1c;
+	position: relative;
+	transform: rotate(-45deg);
+	box-shadow: -10px 10px 90px #d50000;
+	animation: heart 1.5s linear infinite;
+}
+@keyframes heart {
+	0% {
+		transform: rotate(-45deg) scale(1.07);
+	}
+	80% {
+		transform: rotate(-45deg) scale(1);
+	}
+}
+.heart:before {
+	content: "";
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	background: #b71c1c;
+	top: -50%;
+	border-radius: 50px;
+	box-shadow: -10px -10px 90px #d50000;
+}
+.heart:after {
+	content: "";
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	background: #b71c1c;
+	right: -50%;
+	border-radius: 50px;
+	box-shadow: 10px 10px 90px #d50000;
+}
+
+</style>
+</body>
+<html>
